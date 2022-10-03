@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Rookies Batch 6\\C#\\AssignmentDay1\\Assignment-Day1.csproj": {}
+    "D:\\Rookies Batch 6\\C#\\AssignmentDay2\\AssignmentDay2.csproj": {}
   },
   "projects": {
-    "D:\\Rookies Batch 6\\C#\\AssignmentDay1\\Assignment-Day1.csproj": {
+    "D:\\Rookies Batch 6\\C#\\AssignmentDay2\\AssignmentDay2.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Rookies Batch 6\\C#\\AssignmentDay1\\Assignment-Day1.csproj",
-        "projectName": "Assignment-Day1",
-        "projectPath": "D:\\Rookies Batch 6\\C#\\AssignmentDay1\\Assignment-Day1.csproj",
+        "projectUniqueName": "D:\\Rookies Batch 6\\C#\\AssignmentDay2\\AssignmentDay2.csproj",
+        "projectName": "AssignmentDay2",
+        "projectPath": "D:\\Rookies Batch 6\\C#\\AssignmentDay2\\AssignmentDay2.csproj",
         "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-        "outputPath": "D:\\Rookies Batch 6\\C#\\AssignmentDay1\\obj\\",
+        "outputPath": "D:\\Rookies Batch 6\\C#\\AssignmentDay2\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
