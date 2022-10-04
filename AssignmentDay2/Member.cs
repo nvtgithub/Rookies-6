@@ -25,7 +25,7 @@ namespace Assignment
             }
         }
         public Member(string fName, string lName, string gendar, DateTime dateOfBirth,
-         string phoneNumber, string birthPlace, bool isGraduted)
+                       string phoneNumber, string birthPlace, bool isGraduted)
         {
             FirstName = fName;
             LastName = lName;
@@ -35,10 +35,14 @@ namespace Assignment
             BirthPlace = birthPlace;
             IsGraduted = isGraduted;
         }
-        public override string ToString()
+        public string Info
         {
-            return FirstName + " - " + LastName + " | " + Gendar + " | " + DateOfBirth.ToString("dd/mm/yy")
-            + " | " + PhoneNumber + " | " + BirthPlace + " | " + Age.ToString() + " | " + IsGraduted;
+            get
+            {
+                string graduted = (IsGraduted) ? "IsGraduted" : "Not Graduted";
+                return FirstName + " - " + LastName + " | " + Gendar + " | " + DateOfBirth.ToString("dd/mm/yy")
+                + " | " + PhoneNumber + " | " + BirthPlace + " | " + Age.ToString() + " | " + graduted;
+            }
         }
     }
 }

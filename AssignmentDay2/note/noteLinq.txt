@@ -1,0 +1,35 @@
+1. Query Syntex 
+            var query4 = from m in memberList
+            where m.DateOfBirth.Year == 2000
+            select m;
+    -> use the Query same with sql
+
+            var male = memberList.Where( x => x.Gendar == "Male");
+    -> 'Where()' -> if null -> return agrument null
+           var male = memberList.FindAll( x => x.Gendar == "Male");
+    -> 'FindAll()'-> if null -> return list null       
+2. Method Syntex
+ - 1.Return a list of members who is Male
+            Console.WriteLine("\n1.Return a list of members who is Male: ");
+            var male = memberList.Where( x => x.Gendar == "Male");
+            male.ToList().ForEach( m => Console.WriteLine(m.Info));
+    + 'ForEach()' -> use available type of list-> have to 'ToList()' method before that
+
+            var oldestAge = memberList.OrderByDescending( x => x.Age ).ThenBy( x => x.LastName ).First();
+    + Use 'First()' -> Return the first elment of sequence, if not return exception
+    + Use 'FirstOnDefault' -> Return the first elment of sequence, if not return a first element of source
+
+            var listFullName = from m in memberList
+                               select m.FullName;
+            var listFullName = from m in memberList
+                               select new { FullName = m.FirstName + " " + m.LastName };
+
+            var fullName = memberList.Select( x=> {FullName = x.LastName + " " + x.FirstName});
+            Foreach(Member m in memberList)
+            {
+                Console.WriteLine(m.Info);
+            }
+    
+    var firstPerson = (from m in memberList
+                         where m.BirthPlace.ToUpper() == "HA NOi"
+                         select m).FirstOrDefault();

@@ -10,54 +10,42 @@ namespace Assignment
         {
             var memberList = new List<Member>();
 
-            memberList.Add(new Member("Tien", "Nguyen", "Male", new DateTime(2001, 2, 23), "0147258369", "Ha Noi", false));
+            memberList.Add(new Member("Tien", "Nguyen", "Male", new DateTime(2001, 2, 23), "0147258369", "Ha Noi", true));
             memberList.Add(new Member("Anh", "Nguyen", "Female", new DateTime(2000, 2, 23), "0147258369", "Ha Noi", true));
             memberList.Add(new Member("Tung", "Nguyen", "Male", new DateTime(1999, 2, 23), "0147258369", "Hai Duong", false));
 
             //1.Return a list of members who is Male
             Console.WriteLine("\n1.Return a list of members who is Male: ");
-            var query1 = from m in memberList
-                         where m.Gendar == "Male"
-                         select m;
-            foreach (var maleMember in query1)
+            var maleMember = from member in memberList
+                       where member.Gendar == "Male"
+                       select member;
+
+            foreach (var member in maleMember)
             {
-                Console.WriteLine(maleMember.ToString());
+                Console.WriteLine(member.Info);
             }
 
             //2.Return the oldest on base "Age"
             Console.WriteLine("\n2.Return the oldest on base 'Age': ");
+            var maxAge = memberList.Max(member => member.Age);
+            var oldestAge = memberList.Find(member => member.Age == maxAge);
 
-            uint maxAge = 0;
-
-            var query2 = from m in memberList
-                         select new { max = memberList.Max(x => x.Age), };
-
-            foreach (var q in query2)
+            if (oldestAge != null)
             {
-                maxAge = q.max;
-                break;
-            }
-
-            foreach (Member m in memberList)
-            {
-                if (m.Age == maxAge)
-                {
-                    Console.WriteLine(m.ToString());
-                }
+                Console.WriteLine(oldestAge.Info);
             }
 
             //3.Return a new list that contains Full Name = Last Name + First Name
             Console.WriteLine("\n3.Return a new list that contains Full Name = Last Name + First Name");
+            var listFullName = (from member in memberList
+                                select new { FullName = member.FirstName + " " + member.LastName }).ToList();
 
-            foreach (Member m in memberList)
-            {
-                Console.WriteLine($"Full name of member: {m.FullName}");
-            }
+            listFullName.ForEach(x => Console.WriteLine(x.FullName));
 
             //4.Return 3 list of members who has birth year is 2000 or greaterthan 2000 or lessthan 2000
             Console.WriteLine("\nReturn 3 list of members who has birth year is 2000 or greaterthan 2000 or lessthan 2000: ");
-
             uint option = 0;
+
             do
             {
                 option = Convert.ToUInt32(Console.ReadLine());
@@ -65,40 +53,43 @@ namespace Assignment
                 {
                     case 1:
                         {
-                            Console.WriteLine("List of members have birth year = 2000: ");
+                            Console.WriteLine("\nList of members have birth year = 2000: ");
+                            var born2000 = memberList.FindAll(member => member.DateOfBirth.Year == 2000);
 
-                            var query4 = from m in memberList
-                                         where m.DateOfBirth.Year == 2000
-                                         select m;
-                            foreach (var m in query4)
+                            if (born2000 != null)
                             {
-                                Console.WriteLine(m.ToString());
+                                foreach (var member in born2000)
+                                {
+                                    Console.WriteLine(member.Info);
+                                }
                             }
                             break;
                         }
                     case 2:
                         {
-                            Console.WriteLine("List of members have birth year > 2000: ");
+                            Console.WriteLine("\nList of members have birth year > 2000: ");
+                            var bornAfter2000 = memberList.TakeWhile(member => member.DateOfBirth.Year > 2000);
 
-                            var query5 = from m in memberList
-                                         where m.DateOfBirth.Year > 2000
-                                         select m;
-                            foreach (var m in query5)
+                            if (bornAfter2000.Any())
                             {
-                                Console.WriteLine(m.ToString());
+                                foreach (var member in bornAfter2000)
+                                {
+                                    Console.WriteLine(member.Info);
+                                }
                             }
                             break;
                         }
                     case 3:
                         {
-                            Console.WriteLine("List of members have birth year < 2000: ");
+                            Console.WriteLine("\nList of members have birth year < 2000: ");
+                            var bornBefore2000 = memberList.Where(member => member.DateOfBirth.Year < 2000);
 
-                            var query6 = from m in memberList
-                                         where m.DateOfBirth.Year < 2000
-                                         select m;
-                            foreach (var m in query6)
+                            if (bornBefore2000.Any())
                             {
-                                Console.WriteLine(m.ToString());
+                                foreach (var member in bornBefore2000)
+                                {
+                                    Console.WriteLine(member.Info);
+                                }
                             }
                             break;
                         }
@@ -107,32 +98,14 @@ namespace Assignment
 
             //5.Return the first person who was born in Ha Noi
             Console.WriteLine("\n5.Return the first person who was born in Ha Noi: ");
+            var firstPerson = (from member in memberList
+                               where member.BirthPlace.ToUpper() == "HA NOI"
+                               select member).Skip(0).Take(1).FirstOrDefault();
 
-            var query7 = from m in memberList
-                         where m.BirthPlace == "Ha Noi"
-                         select m;
-
-            foreach (var member in query7)
+            if (firstPerson != null)
             {
-                while( 0 <  query7.Count())
-                {
-                    Console.WriteLine(member.ToString());
-                    break;
-                }
-                break;
-            }        
-
-           
-            // while (0 < query7.Count())
-            // {
-            //     foreach (var member in query7)
-            //     {
-            //         Console.WriteLine(member.ToString());
-            //         break;
-            //     }
-            //     break;
-            // }
-
+                Console.WriteLine(firstPerson.Info);
+            }
         }
     }
 }
