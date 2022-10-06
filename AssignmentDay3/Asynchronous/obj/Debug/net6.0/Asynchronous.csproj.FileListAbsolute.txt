@@ -1,0 +1,15 @@
+D:\Rookies Batch 6\C#\AssignmentDay3\Asynchronous\bin\Debug\net6.0\Asynchronous.exe
+D:\Rookies Batch 6\C#\AssignmentDay3\Asynchronous\bin\Debug\net6.0\Asynchronous.deps.json
+D:\Rookies Batch 6\C#\AssignmentDay3\Asynchronous\bin\Debug\net6.0\Asynchronous.runtimeconfig.json
+D:\Rookies Batch 6\C#\AssignmentDay3\Asynchronous\bin\Debug\net6.0\Asynchronous.dll
+D:\Rookies Batch 6\C#\AssignmentDay3\Asynchronous\bin\Debug\net6.0\Asynchronous.pdb
+D:\Rookies Batch 6\C#\AssignmentDay3\Asynchronous\obj\Debug\net6.0\Asynchronous.csproj.AssemblyReference.cache
+D:\Rookies Batch 6\C#\AssignmentDay3\Asynchronous\obj\Debug\net6.0\Asynchronous.GeneratedMSBuildEditorConfig.editorconfig
+D:\Rookies Batch 6\C#\AssignmentDay3\Asynchronous\obj\Debug\net6.0\Asynchronous.AssemblyInfoInputs.cache
+D:\Rookies Batch 6\C#\AssignmentDay3\Asynchronous\obj\Debug\net6.0\Asynchronous.AssemblyInfo.cs
+D:\Rookies Batch 6\C#\AssignmentDay3\Asynchronous\obj\Debug\net6.0\Asynchronous.csproj.CoreCompileInputs.cache
+D:\Rookies Batch 6\C#\AssignmentDay3\Asynchronous\obj\Debug\net6.0\Asynchronous.dll
+D:\Rookies Batch 6\C#\AssignmentDay3\Asynchronous\obj\Debug\net6.0\refint\Asynchronous.dll
+D:\Rookies Batch 6\C#\AssignmentDay3\Asynchronous\obj\Debug\net6.0\Asynchronous.pdb
+D:\Rookies Batch 6\C#\AssignmentDay3\Asynchronous\obj\Debug\net6.0\Asynchronous.genruntimeconfig.cache
+D:\Rookies Batch 6\C#\AssignmentDay3\Asynchronous\obj\Debug\net6.0\ref\Asynchronous.dll

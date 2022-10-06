@@ -1,0 +1,15 @@
+D:\Rookies Batch 6\C#\AssignmentDay3\obj\Debug\net6.0\AssignmentDay3.csproj.AssemblyReference.cache
+D:\Rookies Batch 6\C#\AssignmentDay3\obj\Debug\net6.0\AssignmentDay3.GeneratedMSBuildEditorConfig.editorconfig
+D:\Rookies Batch 6\C#\AssignmentDay3\obj\Debug\net6.0\AssignmentDay3.AssemblyInfoInputs.cache
+D:\Rookies Batch 6\C#\AssignmentDay3\obj\Debug\net6.0\AssignmentDay3.AssemblyInfo.cs
+D:\Rookies Batch 6\C#\AssignmentDay3\obj\Debug\net6.0\AssignmentDay3.csproj.CoreCompileInputs.cache
+D:\Rookies Batch 6\C#\AssignmentDay3\bin\Debug\net6.0\AssignmentDay3.exe
+D:\Rookies Batch 6\C#\AssignmentDay3\bin\Debug\net6.0\AssignmentDay3.deps.json
+D:\Rookies Batch 6\C#\AssignmentDay3\bin\Debug\net6.0\AssignmentDay3.runtimeconfig.json
+D:\Rookies Batch 6\C#\AssignmentDay3\bin\Debug\net6.0\AssignmentDay3.dll
+D:\Rookies Batch 6\C#\AssignmentDay3\bin\Debug\net6.0\AssignmentDay3.pdb
+D:\Rookies Batch 6\C#\AssignmentDay3\obj\Debug\net6.0\AssignmentDay3.dll
+D:\Rookies Batch 6\C#\AssignmentDay3\obj\Debug\net6.0\refint\AssignmentDay3.dll
+D:\Rookies Batch 6\C#\AssignmentDay3\obj\Debug\net6.0\AssignmentDay3.pdb
+D:\Rookies Batch 6\C#\AssignmentDay3\obj\Debug\net6.0\AssignmentDay3.genruntimeconfig.cache
+D:\Rookies Batch 6\C#\AssignmentDay3\obj\Debug\net6.0\ref\AssignmentDay3.dll
