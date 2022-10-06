@@ -16,11 +16,11 @@ namespace Assignment
 
             //1.Return a list of members who is Male
             Console.WriteLine("\n1.Return a list of members who is Male: ");
-            var maleMember = from member in memberList
-                       where member.Gendar == "Male"
-                       select member;
+            var maleMembers = from member in memberList
+                              where member.Gender == "Male"
+                              select member;
 
-            foreach (var member in maleMember)
+            foreach (var member in maleMembers)
             {
                 Console.WriteLine(member.Info);
             }
@@ -28,19 +28,19 @@ namespace Assignment
             //2.Return the oldest on base "Age"
             Console.WriteLine("\n2.Return the oldest on base 'Age': ");
             var maxAge = memberList.Max(member => member.Age);
-            var oldestAge = memberList.Find(member => member.Age == maxAge);
+            var oldestMember = memberList.Find(member => member.Age == maxAge);
 
-            if (oldestAge != null)
+            if (oldestMember != null)
             {
-                Console.WriteLine(oldestAge.Info);
+                Console.WriteLine(oldestMember.Info);
             }
 
             //3.Return a new list that contains Full Name = Last Name + First Name
             Console.WriteLine("\n3.Return a new list that contains Full Name = Last Name + First Name");
-            var listFullName = (from member in memberList
+            var fullNameList = (from member in memberList
                                 select new { FullName = member.FirstName + " " + member.LastName }).ToList();
 
-            listFullName.ForEach(x => Console.WriteLine(x.FullName));
+            fullNameList.ForEach(x => Console.WriteLine(x.FullName));
 
             //4.Return 3 list of members who has birth year is 2000 or greaterthan 2000 or lessthan 2000
             Console.WriteLine("\nReturn 3 list of members who has birth year is 2000 or greaterthan 2000 or lessthan 2000: ");
@@ -56,7 +56,7 @@ namespace Assignment
                             Console.WriteLine("\nList of members have birth year = 2000: ");
                             var born2000 = memberList.FindAll(member => member.DateOfBirth.Year == 2000);
 
-                            if (born2000 != null)
+                            if (born2000.Any())
                             {
                                 foreach (var member in born2000)
                                 {
